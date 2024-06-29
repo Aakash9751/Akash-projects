@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio Website </title>
+    <script>
+      function navigateToPage(page) {
+            window.location.href = page;
+        }
+  </script>
+ 
+    <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+button{
+  margin-top: 30px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+p {
+  color: rgb(255, 255, 255);
+}
+.p2 {
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  
+}
+.p1 {
+  color: rgb(0, 0, 0);
+}
+
+.p3 {
+  color: rgb(0, 0, 0);
+}
+
+/* TRANSITION */
+
+
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+  
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+  
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-decoration-color: rgb(249, 105, 14);
+ 
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(249, 105, 14);
+}
+
+.logo {
+  font-size: 2rem;
+  color:rgba(249, 105, 14);
+  font-weight: 600;
+}
+
+.logo:hover {
+  cursor: default;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(249, 105, 14);
+}
+
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+  
+}
+
+.section-container {
+  display: flex;
+
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+  border-radius: 5rem;
+}
+
+.section__text p {
+  font-weight: 600;
+  
+}
+
+.section__text__p1 {
+  text-align: center;
+  color:rgba(249, 105, 14);
+}
+
+.section__text__p2 {
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-weight: 800;
+  text-align: center;
+  color:white;
+  font-family: 'Dosis',sans-serif;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+ 
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.btn-color-1:hover{
+  background: rgb(0, 0, 0) 0.1rem solid;
+}
+.btn-color-2:hover{
+  background: none;
+}
+.btn-color-2:hover{
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+  
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+  
+  
+}
+
+.about-pic {
+  margin-right: 40px;
+  height: 360px;
+  width: 350px;
+  
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background-color: rgb(173, 166, 166);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(173, 166, 166);
+  text-align: center;
+ 
+  
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+  border-radius: 50%;
+ 
+  
+}
+
+.section__pic-container img {
+  margin-top: 50px;
+  border-radius: 50%; /* This will make the image round */
+}
+
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+  
+}
+
+.experience-sub-title {
+
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background-color: rgb(173, 166, 166);
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+.project-img1{
+  border-radius: 2rem;
+  width: 260px;
+  height: 200px;
+}
+.project-img2 {
+  border-radius: 2rem;
+  width: 260px;
+  height: 200px;
+}
+.project-img3 {
+  border-radius: 2rem;
+  width: 260px;
+  height: 200px;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  border :2px solid rgb(163, 163, 163);
+  color: rgb(255, 255, 255);
+  background-color: rgba(249, 105, 14);
+ 
+}
+
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background-color: rgb(173, 166, 166);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+  
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+.link-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+    </style>
+</head>
+
+<body>
+
+  <nav id="desktop-nav">
+    <div class="logo">AAKASH N</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section id="profile">
+    <div class="section__pic-container">
+      <img  src="my1.jpeg" height="330" width="330" alt="John Doe profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Aakash N</h1>
+      <p class="section__text__p2">FullStack Developer</p>
+      <div class="btn-container">
+        <a href ="https://drive.google.com/file/d/1mgxH2ViskRJD0HkNNqp6TYz-8PcMktJG/view?usp=drive_link"> <button class="btn btn-color-2"> Download CV </button></a>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+
+        <img src="link1.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/aakash-n-338495254 '"/>
+        <img src="github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/Aakash9751/projects.git'"/>
+      </div>
+    </div>
+  </section>
+
+<hr>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container ">
+      <div class="section__pic-container ">
+        <img
+          src="my1.jpeg"
+          alt="Profile picture"
+          class="about-pic"
+        />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="exp.png" alt="Experience icon" class="icon"/>
+            <h3>Experience</h3>
+            <p class ="p1"> Fresher <br />Frontend Developer</p>
+          </div>
+          <div class="details-container">
+            <img src="edu.png" alt="Education icon" class="icon"/>
+            <h3>Education</h3>
+            <p class ="p3">B.E., Computer Sciene and Engineering </p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p class ="p2">
+            Myself Aakash. I have completed my graduate in University College of Engineering,Villupuram.
+            I am currently staying in chennai. I got it my Python fullstack Development in login360 Chennai. 
+            I am going to seeking Python fullstack developer role ("Software developer").
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <a href="#experience"><img src="arrow1.png" alt="Arrow icon" class="icon arrow"/></a>
+  </section>
+
+  <hr>
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>ReactJs</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+           
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>My SQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="checked.png" alt="Experience icon" class="icon"/>
+              <div>
+                <h3>Django</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#projects"><img src="arrow1.png" alt="Arrow icon" class="icon arrow"/></a>
+  </section>
+
+  <hr>
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container" >
+      <div  class="about-containers" >
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="buss.jpg" alt="Project 1" class="project-img1"/>
+          </div>
+          <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="navigateToPage('redbus.html')">Live Demo</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="proj1.png" alt="Project 1" class="project-img2"/>
+          </div>
+          <h2 class="experience-sub-title project-title">Project Two</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+        
+            <button class="btn btn-color-2 project-btn" onclick="navigateToPage('todolist.html')">Live Demo </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="proj2.png" alt="Project 1" class="project-img3"/>
+          </div>
+          <h2 class="experience-sub-title project-title">Project Three</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="navigateToPage('boot.html')">Live Demo</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#contact"><img src="arrow1.png" alt="Arrow icon" class="icon arrow"/></a>
+</section>
+
+  <hr>
+
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <img src="mail61.png" alt="Email icon" class="icon email-icon"/>
+            <p><a href="https://mail.google.com/mail/?view=cm&to=akasheeswetha@gmail.com&subject=Contact%20Request" class="email-link">akasheeswetha@gmail.com</a></p>
+ 
+
+  
+        </div>
+        <div class="contact-info-container">
+            <img src="link11.png" alt="LinkedIn icon" class="icon link-icon"/>
+            <p><a href="https://www.linkedin.com/in/aakash-n-338495254" class="email-link">LinkedIn</a></p>
+        </div>
+    </div>
+</section>
+    <hr>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2023 Aakash N. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
